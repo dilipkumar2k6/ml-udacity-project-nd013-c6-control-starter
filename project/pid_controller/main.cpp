@@ -58,6 +58,20 @@ using namespace std;
 using json = nlohmann::json;
 
 #define _USE_MATH_DEFINES
+// PID
+static const double KP_STEER = 0.65;
+static const double KI_STEER = 0.02;
+static const double KD_STEER = 0.3;
+
+static const double MIN_STEER = -1.2;
+static const double MAX_STEER = 1.2;
+
+static const double KP_THROTTLE = 0.2;
+static const double KI_THROTTLE = 0.01;
+static const double KD_THROTTLE = 0.1;
+
+static const double MIN_THROTTLE = -1.;
+static const double MAX_THROTTLE = 1.;
 
 string hasData(string s) {
   auto found_null = s.find("null");
@@ -220,21 +234,16 @@ int main ()
   **/
 
   // PID parameters for steering
-  double steer_p = 0.1;
-  double steer_i = 0.01;
-  double steer_d = 0.1;
+    PID pid_steer = PID();
+    pid_steer.Init(KP_STEER, KI_STEER, KD_STEER, MAX_STEER, MIN_STEER);
   
   // initialize pid throttle
   /**
   * TODO (Step 1): create pid (pid_throttle) for throttle command and initialize values
   **/
   // PID parameters for throttle
-  double throttle_p = 0.05;
-  double throttle_i = 0.1;
-  double throttle_d = 0.08;
-  
-  PID pid_steer = PID();
-  PID pid_throttle = PID();
+   PID pid_throttle = PID();
+   pid_throttle.Init(KP_THROTTLE, KI_THROTTLE, KD_THROTTLE, MAX_THROTTLE, MIN_THROTTLE);
 
   h.onMessage([&pid_steer, &pid_throttle, &new_delta_time, &timer, &prev_timer, &i, &prev_timer](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode)
   {
@@ -343,7 +352,8 @@ int main ()
           **/
           // modify the following line for step 2
           // error_throttle = 0;
-          error_throttle = v_points.back() - velocity;
+          // error_throttle = v_points.back() - velocity;
+          error_throttle = v_points[0] - velocity;
 
 
 
