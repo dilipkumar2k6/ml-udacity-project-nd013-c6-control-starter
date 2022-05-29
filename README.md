@@ -14,7 +14,7 @@ PID Controller is tested with following four different parameters.
 | Test 4 |   0.65   |   0.02   |   0.3    |     0.2     |    0.01     |     0.1     |
 
 Following is video recorded for test 4 which is the acceptable PID Controller parameters.
-https://github.com/dilipkumar2k6/ml-udacity-project-nd013-c6-control-starter/blob/master/project/results/test4/test_4.mov
+https://www.youtube.com/watch?v=QY5nzZ_ucNo
 
 ## PID Controller Test 1
 Following params are used for Test 1
