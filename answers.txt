@@ -1,0 +1,16 @@
+1. Add the plots to your report and explain them (describe what you see)
+Added plots and recorded videos in README.md with observations.
+
+2. What is the effect of the PID according to the plots, how each part of the PID affects the control command?
+- `P` ---> Proportional term: Produces an output value that is proportional to the current error value. A high proportional gain results in a large change in the output for a given change in the error.
+- `I` ---> Integral term: Proportional to both the magnitude of the error and the duration of the error. The integral term accelerates the movement of the process towards setpoint and eliminates the residual steady-state error that occurs with a pure proportional controller.
+- `D` ---> Derivative term: calculated by determining the slope of the error over time and multiplying this rate of change by the derivative gain. Derivative action predicts system behavior and thus improves settling time and stability of the system.
+
+More detailed information: [PID controller](https://en.wikipedia.org/wiki/PID_controller#Proportional)
+
+3. How would you design a way to automatically tune the PID parameters?
+`Twiddle algorithm`:  The twiddle algorithm continuously tunes the PID controller's hyperparameters by analyzing the cross-track error and keeping track of the smallest CTE.
+
+4. PID controller is a model free controller, i.e. it does not use a model of the car. Could you explain the pros and cons of this type of controller?
+PID can be used even a model is not available. It is a simple algorithm to implement and compute, because of that it suits to run on basic platforms.
+Using single reference point in each step gives PID disadvantage to produce much better results.
