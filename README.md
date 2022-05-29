@@ -30,7 +30,7 @@ Following is plot based on throttle values of the error and the pid command whic
 ![](project/results/test1/pid_efficiency_throttle_test_1.png)
 
 Following is recorded video for this test.
-https://github.com/dilipkumar2k6/ml-udacity-project-nd013-c6-control-starter/blob/master/project/results/test1/test_1.mov
+https://www.youtube.com/watch?v=TCLZqVD__RI
 
 ### Observation
 Car had collision therefore test 1 parameters are not acceptable.
@@ -49,7 +49,7 @@ Following is plot based on throttle values of the error and the pid command whic
 ![](project/results/test2/pid_efficiency_throttle_test_2.png)
 
 Following is recorded video for this test.
-https://github.com/dilipkumar2k6/ml-udacity-project-nd013-c6-control-starter/blob/master/project/results/test2/test_2.mov
+https://www.youtube.com/watch?v=TprTpD6pLXU
 
 ### Observation
 Car had collision therefore test 2 parameters are not acceptable.
@@ -68,7 +68,7 @@ Following is plot based on throttle values of the error and the pid command whic
 ![](project/results/test3/pid_efficiency_throttle_test_3.png)
 
 Following is recorded video for this test.
-https://github.com/dilipkumar2k6/ml-udacity-project-nd013-c6-control-starter/blob/master/project/results/test3/test_3.mov
+https://www.youtube.com/watch?v=uD_XbfQDv2g
 
 ### Observation
 Car had collision therefore test 3 parameters are not acceptable.
@@ -87,7 +87,7 @@ Following is plot based on throttle values of the error and the pid command whic
 ![](project/results/test4/pid_efficiency_throttle_test_4.png)
 
 Following is recorded video for this test.
-https://github.com/dilipkumar2k6/ml-udacity-project-nd013-c6-control-starter/blob/master/project/results/test4/test_4.mov
+https://www.youtube.com/watch?v=QY5nzZ_ucNo
 
 ### Observation
 There was no collision therefore test 4 parameters are acceptable.
